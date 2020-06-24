@@ -1,0 +1,27 @@
+CHDR = \
+cauxiliary.h cauxiliary.c
+
+DHDR = \
+dauxiliary.h dauxiliary.c
+
+SHDR = \
+sauxiliary.h sauxiliary.c
+
+CSRC = \
+time_cgemm.c time_ctrsm.c time_cposv.c time_cpotrf.c time_cgesv.c time_cgetrf.c time_cgesv_incpiv.c time_cgetrf_incpiv.c time_cgels.c time_cgeqrf.c time_cgemm_tile.c time_cposv_tile.c time_cpotrf_tile.c time_cpotri_tile.c time_cgesv_tile.c time_cgetrf_tile.c time_cgetri_tile.c time_cgesv_incpiv_tile.c time_cgetrf_incpiv_tile.c time_cgetrf_tntpiv_tile.c time_cgels_tile.c time_cgeqrf_tile.c time_cgecfi.c time_clapack2tile.c time_chetrd_tile.c time_cheev_tile.c time_cheevd_tile.c time_cheevr_tile.c time_chegv_tile.c time_cgesvd_tile.c time_cgesdd_tile.c time_cgetrf_reclap.c time_cgetrf_rectil.c time_cgeqp3.c
+
+DSRC = \
+time_dgemm.c time_dtrsm.c time_dsposv.c time_dposv.c time_dpotrf.c time_dsgesv.c time_dgesv.c time_dgetrf.c time_dgesv_incpiv.c time_dgetrf_incpiv.c time_dgels.c time_dgeqrf.c time_dgemm_tile.c time_dsposv_tile.c time_dposv_tile.c time_dpotrf_tile.c time_dpotri_tile.c time_dsgesv_tile.c time_dgesv_tile.c time_dgetrf_tile.c time_dgetri_tile.c time_dgesv_incpiv_tile.c time_dgetrf_incpiv_tile.c time_dgetrf_tntpiv_tile.c time_dgels_tile.c time_dgeqrf_tile.c time_dgecfi.c time_dlapack2tile.c time_dsytrd_tile.c time_dsyev_tile.c time_dsyevd_tile.c time_dsyevr_tile.c time_dsygv_tile.c time_dgesvd_tile.c time_dgesdd_tile.c time_dgetrf_reclap.c time_dgetrf_rectil.c time_dgeqp3.c
+
+SSRC = \
+time_sgemm.c time_strsm.c time_sposv.c time_spotrf.c time_sgesv.c time_sgetrf.c time_sgesv_incpiv.c time_sgetrf_incpiv.c time_sgels.c time_sgeqrf.c time_sgemm_tile.c time_sposv_tile.c time_spotrf_tile.c time_spotri_tile.c time_sgesv_tile.c time_sgetrf_tile.c time_sgetri_tile.c time_sgesv_incpiv_tile.c time_sgetrf_incpiv_tile.c time_sgetrf_tntpiv_tile.c time_sgels_tile.c time_sgeqrf_tile.c time_sgecfi.c time_slapack2tile.c time_ssytrd_tile.c time_ssyev_tile.c time_ssyevd_tile.c time_ssyevr_tile.c time_ssygv_tile.c time_sgesvd_tile.c time_sgesdd_tile.c time_sgetrf_reclap.c time_sgetrf_rectil.c time_sgeqp3.c
+
+CF90 = \
+
+
+DF90 = \
+
+
+SF90 = \
+
+

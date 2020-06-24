@@ -1,0 +1,62 @@
+###
+#
+# @file make.inc.gcc.mkl_x86_64
+#
+#  PLASMA is a software package provided by Univ. of Tennessee,
+#  Univ. of California Berkeley and Univ. of Colorado Denver
+#
+# @version 2.6.0
+# @author Piotr Luszczek
+# @author Mathieu Faverge
+# @date 2010-11-15
+#
+###
+#
+# OS:       Linux x86-64
+# Compiler: GCC
+# BLAS:     MKL
+#
+###
+
+# PLASMA install directory (./install by default)
+#prefix      = /install/in/path/
+
+#GPU_TARGET ?= Tesla Fermi Kepler
+
+# Compilers, linker/loader, archiver, options
+CC          = gcc -O2 -DPLASMA_WITH_MKL
+FC          = gfortran -O2 -DPLASMA_WITH_MKL
+MCC         = mnvcc --ompss
+NVCC        = nvcc
+LOADER      = $(FC)
+
+ARCH        = ar
+ARCHFLAGS   = cr
+RANLIB      = ranlib
+
+CFLAGS      = -O2 -DADD_
+FFLAGS      = -O2
+LDFLAGS     = -O2
+
+# Enable/Disable F90 compilation
+PLASMA_F90 = 0
+
+# BLAS library
+# Choose between one of the three options
+# -DPLASMA_WITH_SMP // for CPU only
+# -DPLASMA_WITH_CUDA_PURE // for GPU only
+# -DPLASMA_WITH_CUDA_HYBRID // for CPU and GPU
+CFLAGS += -DPLASMA_WITH_MKL -I${MKLROOT}/include -DPLASMA_WITH_SMP
+LIBBLAS = -L$(MKLROOT)/lib/intel64 -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lpthread
+
+NVCCFLAGS   = ${CFLAGS} -Xcompiler "-fno-strict-aliasing $(FPIC)"
+
+# CBLAS library
+# CBLAS is included in MKL
+
+# LAPACK and TMG library
+# LAPACK and TMG are included in MKL
+
+# LAPACK C Wrapper library
+INCCLAPACK  = -I/path/to/lapack/include
+LIBCLAPACK  = -L/path/to/lapack/lib -llapacke
